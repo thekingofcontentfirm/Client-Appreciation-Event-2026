@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Appreciation Event 2026 — The King Of Content</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F9F9F6;
+    --ivory-deep: #efece4;
+    --blue: #0E253A;
+    --blue-deep: #081928;
+    --gold: #D6BA73;
+    --gold-soft: #e3cd97;
+    --ink: #0E253A;
+    --muted: #6b6b65;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    background: var(--blue);
+    color: var(--ivory);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 40px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(214, 186, 115, 0.18) 0%, transparent 50%),
+      radial-gradient(circle at 85% 75%, rgba(214, 186, 115, 0.10) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.35;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    animation: fadeIn 1s ease both;
+  }
+
+  .hero-top span:first-child::before {
+    content: '◆';
+    margin-right: 10px;
+    color: var(--gold);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--gold-soft);
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(52px, 9vw, 132px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    animation: fadeUp 1s ease 0.4s both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 32px;
+    animation: expand 1.2s ease 0.6s both;
+  }
+
+  @keyframes expand {
+    from { width: 0; opacity: 0; }
+    to { width: 80px; opacity: 1; }
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    opacity: 0.85;
+    margin-bottom: 48px;
+    animation: fadeUp 1s ease 0.8s both;
+  }
+
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    animation: fadeUp 1s ease 1s both;
+  }
+
+  .hero-meta-item { text-align: center; }
+
+  .hero-meta-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .hero-meta-value {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ivory);
+  }
+
+  .hero-bottom {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    animation: fadeIn 1.5s ease 1.2s both;
+  }
+
+  .scroll-arrow {
+    display: inline-block;
+    margin-top: 12px;
+    animation: bob 2s ease infinite;
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* ============ SECTIONS ============ */
+  section { padding: 120px 40px; position: relative; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(36px, 5.5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+    color: var(--blue);
+  }
+
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .section-intro {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 64px;
+  }
+
+  /* ============ WELCOME ============ */
+  .welcome { background: var(--ivory); text-align: center; }
+  .welcome .section-label { justify-content: center; }
+  .welcome .section-label::before { display: none; }
+  .welcome .section-label::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .welcome-text {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.4;
+    color: var(--blue);
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .welcome-text em { font-style: italic; color: var(--gold); }
+
+  /* ============ SCHEDULE ============ */
+  .schedule {
+    background: var(--blue);
+    color: var(--ivory);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .schedule::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 90% 20%, rgba(214, 186, 115, 0.12) 0%, transparent 45%);
+    pointer-events: none;
+  }
+
+  .schedule .section-title { color: var(--ivory); }
+  .schedule .section-intro { color: rgba(249, 249, 246, 0.75); }
+
+  .timeline { position: relative; margin-top: 40px; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 110px;
+    top: 12px;
+    bottom: 12px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 110px 40px 1fr;
+    align-items: start;
+    margin-bottom: 56px;
+    position: relative;
+  }
+
+  .timeline-item:last-child { margin-bottom: 0; }
+
+  .timeline-time {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--gold);
+    line-height: 1.2;
+    padding-top: 4px;
+  }
+
+  .timeline-time small {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: 4px;
+    font-family: 'Inter Tight', sans-serif;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin: 12px auto 0;
+    box-shadow: 0 0 0 4px var(--blue), 0 0 0 5px var(--gold);
+    position: relative;
+    z-index: 2;
+  }
+
+  .timeline-content h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--ivory);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .timeline-content p {
+    color: rgba(249, 249, 246, 0.7);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ============ VENUE ============ */
+  .venue { background: var(--ivory); }
+
+  .venue-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .venue-card {
+    background: var(--ivory-deep);
+    padding: 48px 40px;
+    border: 1px solid rgba(14, 37, 58, 0.08);
+    position: relative;
+    transition: all 0.4s ease;
+  }
+
+  .venue-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    box-shadow: 0 24px 48px -16px rgba(14, 37, 58, 0.15);
+  }
+
+  .venue-card-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 6px 12px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+
+  .venue-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--blue);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .venue-card .venue-time {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .venue-card address {
+    font-style: normal;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .venue-card .venue-note {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    padding-top: 24px;
+    border-top: 1px solid rgba(14, 37, 58, 0.1);
+  }
+
+  /* ============ BRING ============ */
+  .bring {
+    background: var(--ivory-deep);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bring::before {
+    content: '✦';
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    font-size: 120px;
+    color: var(--gold);
+    opacity: 0.12;
+  }
+
+  .bring-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .bring-item {
+    background: var(--ivory);
+    padding: 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border-left: 2px solid var(--gold);
+    transition: all 0.3s ease;
+  }
+
+  .bring-item:hover { transform: translateX(4px); }
+
+  .bring-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: var(--blue);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .bring-item h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+
+  .bring-item p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .important-notice {
+    margin-top: 48px;
+    background: var(--blue);
+    color: var(--ivory);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .important-notice::before {
+    content: 'IMPORTANT';
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+  }
+
+  .important-notice h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: var(--gold);
+  }
+
+  .important-notice p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(249, 249, 246, 0.9);
+  }
+
+  /* ============ HOTEL ============ */
+  .hotel { background: var(--ivory); }
+
+  .hotel-card {
+    background: var(--blue);
+    color: var(--ivory);
+    padding: 64px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+
+  .hotel-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(214, 186, 115, 0.15) 0%, transparent 60%);
+  }
+
+  .hotel-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .hotel-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .hotel-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+  }
+
+  .hotel-card h3 em { font-style: italic; color: var(--gold); }
+
+  .hotel-details {
+    color: rgba(249, 249, 246, 0.85);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  .hotel-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid rgba(214, 186, 115, 0.3);
+  }
+
+  .hotel-meta-item .label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .hotel-meta-item .value {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--ivory);
+  }
+
+  .price-display {
+    text-align: center;
+    background: rgba(214, 186, 115, 0.08);
+    border: 1px solid rgba(214, 186, 115, 0.3);
+    padding: 40px 32px;
+  }
+
+  .price-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .price-amount {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--ivory);
+    margin-bottom: 8px;
+  }
+
+  .price-amount sup {
+    font-size: 24px;
+    vertical-align: top;
+    margin-right: 2px;
+    color: var(--gold);
+  }
+
+  .price-unit {
+    font-size: 13px;
+    color: rgba(249, 249, 246, 0.7);
+    margin-bottom: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--blue);
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gold);
+  }
+
+  .btn:hover { background: transparent; color: var(--gold); }
+
+  .btn-outline { background: transparent; color: var(--gold); }
+  .btn-outline:hover { background: var(--gold); color: var(--blue); }
+
+  /* ============ FAQ ============ */
+  .faq { background: var(--ivory-deep); }
+
+  .faq-list { margin-top: 40px; }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(14, 37, 58, 0.12);
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--blue);
+    cursor: pointer;
+    gap: 24px;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 24px;
+    color: var(--gold);
+    transition: transform 0.3s ease;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 300;
+    flex-shrink: 0;
+  }
+
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+
+  .faq-answer {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 720px;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--blue-deep);
+    color: var(--ivory);
+    padding: 80px 40px 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .footer-mark {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .footer-tagline {
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(249, 249, 246, 0.7);
+    margin-bottom: 48px;
+  }
+
+  .footer-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 32px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(249, 249, 246, 0.5);
+    letter-spacing: 0.1em;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    section { padding: 80px 24px; }
+    .hero { padding: 40px 24px; }
+    .hero-top { font-size: 9px; flex-direction: column; gap: 12px; }
+    .hero-meta { gap: 28px; }
+    .venue-grid { grid-template-columns: 1fr; }
+    .bring-grid { grid-template-columns: 1fr; }
+    .hotel-card { padding: 40px 28px; }
+    .hotel-content { grid-template-columns: 1fr; gap: 40px; }
+    .timeline::before { left: 6px; }
+    .timeline-item {
+      grid-template-columns: 24px 1fr;
+      gap: 16px;
+    }
+    .timeline-time {
+      grid-column: 1 / -1;
+      padding-left: 40px;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .timeline-dot { margin: 8px 0 0; }
+    .timeline-content { grid-column: 2; }
+    .price-amount { font-size: 48px; }
+    .hotel-card h3 { font-size: 32px; }
+    .faq-item summary { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
+    <span>The King Of Content Inc.</span>
+    <span>Atlanta, GA · 2026</span>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">An invitation to celebrate</div>
+    <h1>Client<br>Appreciation <em>Day</em></h1>
+    <div class="hero-divider"></div>
+    <div class="hero-sub">A Day of Learning · Play · Connection</div>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Date</div>
+        <div class="hero-meta-value">June 6, 2026</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Time</div>
+        <div class="hero-meta-value">10AM – 5PM EST</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">City</div>
+        <div class="hero-meta-value">Atlanta, GA</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <div>Scroll for details</div>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome">
+  <div class="container">
+    <div class="section-label">A note from us</div>
+    <p class="welcome-text">
+      We are <em>genuinely thrilled</em> to spend the day with you. This event is our way of saying thank you for being part of the King Of Content family — a day built around <em>education, play, and shared moments</em> over a great meal.
+    </p>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule">
+  <div class="container">
+    <div class="section-label">The day, hour by hour</div>
+    <h2 class="section-title">A thoughtfully <em>curated</em> day.</h2>
+    <p class="section-intro">From morning education to afternoon adventure, every moment of the day is designed for connection. Here's what to expect.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">10:00 AM<small>Arrival</small></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Welcome & Check-in</h3>
+          <p>Arrive at the Aloft Atlanta Perimeter Center. We'll greet you, get you settled, and kick the day off the right way.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">Morning<small>Education</small></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Educational Session</h3>
+          <p>Our signature learning component — designed to add real value to your business and bring fresh perspective to what you're building.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">Midday<small>Lunch</small></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Lunch Together</h3>
+          <p>A shared meal — the part of the day where the best conversations always seem to happen.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">3:10 PM<small>Activity</small></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Activate Buckhead</h3>
+          <p>The fun part. We'll head to Activate Buckhead for an hour of immersive games — running, jumping, problem-solving. Get ready to move.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">5:00 PM<small>Close</small></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Farewells</h3>
+          <p>We wrap the day with gratitude. Until the next one.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUES -->
+<section class="venue">
+  <div class="container">
+    <div class="section-label">Where it all happens</div>
+    <h2 class="section-title">Two venues, <em>one unforgettable</em> day.</h2>
+
+    <div class="venue-grid">
+      <div class="venue-card">
+        <div class="venue-card-tag">Main Venue</div>
+        <h3>Aloft Atlanta<br>Perimeter Center</h3>
+        <div class="venue-time">10:00 AM – Afternoon</div>
+        <address>
+          Aloft by Marriott<br>
+          Atlanta Perimeter Center<br>
+          Atlanta, GA
+        </address>
+        <div class="venue-note">Home base for the day — where the education session and lunch will take place. Comfortable, modern, and centrally located.</div>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-tag">Activity Venue</div>
+        <h3>Activate<br>Buckhead</h3>
+        <div class="venue-time">3:10 PM – 4:10 PM</div>
+        <address>
+          4540 Roswell Road, Suite A<br>
+          Atlanta, GA 30342<br>
+          (404) 891-9126
+        </address>
+        <div class="venue-note">An immersive game venue with active, interactive challenges. We'll have a private 60-minute Large Group Booking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO BRING -->
+<section class="bring">
+  <div class="container">
+    <div class="section-label">Come prepared</div>
+    <h2 class="section-title">A few things to <em>bring along.</em></h2>
+    <p class="section-intro">The day includes a hands-on activity at Activate Buckhead, so a little prep goes a long way. Here's what we recommend.</p>
+
+    <div class="bring-grid">
+      <div class="bring-item">
+        <div class="bring-icon">01</div>
+        <div>
+          <h4>Comfortable, flat shoes</h4>
+          <p>Closed-toe sneakers required for Activate. You'll be running, jumping, and moving — no heels, sandals, or open-toe shoes.</p>
+        </div>
+      </div>
+
+      <div class="bring-item">
+        <div class="bring-icon">02</div>
+        <div>
+          <h4>Comfortable clothing</h4>
+          <p>Dress for movement. Activate involves crawling, climbing, and physical play — wear something you can move freely in.</p>
+        </div>
+      </div>
+
+      <div class="bring-item">
+        <div class="bring-icon">03</div>
+        <div>
+          <h4>Completed waiver</h4>
+          <p>All participants must complete a player profile and waiver before arriving at Activate. We'll send the link separately.</p>
+        </div>
+      </div>
+
+      <div class="bring-item">
+        <div class="bring-icon">04</div>
+        <div>
+          <h4>Your energy</h4>
+          <p>Come ready to learn, connect, and have fun. This day is for you — show up as you and bring your best.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="important-notice">
+      <h4>A note on the Activate experience</h4>
+      <p>The activity includes flashing lights, music, and fog for a fully immersive experience. If you have any sensitivities or accessibility concerns, please reach out beforehand so we can make sure you're set up for a great day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section class="hotel" id="hotel">
+  <div class="container">
+    <div class="section-label">Staying overnight?</div>
+    <h2 class="section-title">A <em>group rate</em> just for you.</h2>
+    <p class="section-intro">For attendees traveling in or simply preferring to stay nearby, we've secured a special group rate at the Aloft by Marriott Atlanta Perimeter Center — the main venue for the day.</p>
+
+    <div class="hotel-card">
+      <div class="hotel-content">
+        <div>
+          <div class="hotel-tag">Exclusive Group Rate</div>
+          <h3>Aloft by Marriott<br>Atlanta <em>Perimeter Center</em></h3>
+          <div class="hotel-details">
+            Stay where the event happens. Our reserved block is available for the nights surrounding the event, so you can travel in early or stay an extra night without worrying about transportation on event day.
+          </div>
+          <div class="hotel-meta">
+            <div class="hotel-meta-item">
+              <div class="label">Check-in</div>
+              <div class="value">June 4, 2026</div>
+            </div>
+            <div class="hotel-meta-item">
+              <div class="label">Check-out</div>
+              <div class="value">June 7, 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-display">
+          <div class="price-label">Group Rate</div>
+          <div class="price-amount"><sup>$</sup>119</div>
+          <div class="price-unit">per night USD</div>
+          <a href="https://app.marriott.com/reslink?id=1778358939264&key=GRP&app=resvlink" target="_blank" rel="noopener" class="btn btn-outline">Book your room</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-label">Good to know</div>
+    <h2 class="section-title">Questions, <em>answered.</em></h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What time should I arrive?</summary>
+        <div class="faq-answer">Please arrive by 10:00 AM EST at the Aloft Atlanta Perimeter Center. For the Activate portion, we'll head over together and arrive about 20 minutes before our 3:10 PM session start.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is lunch provided?</summary>
+        <div class="faq-answer">Yes — lunch is included as part of the day. If you have dietary restrictions or allergies, please let us know in advance so we can accommodate.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I can't wear closed-toe shoes?</summary>
+        <div class="faq-answer">Closed-toe shoes are a venue requirement at Activate Buckhead for safety. If you need recommendations or have concerns, please reach out and we'll help figure out the best option.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I have to participate in the activity?</summary>
+        <div class="faq-answer">Activate is designed for groups of 3–5 players at a time, so larger groups rotate in and out — meaning there's natural downtime. Participation is encouraged but you can sit out portions if you prefer.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need to book a hotel room?</summary>
+        <div class="faq-answer">Only if you'd like to stay overnight. The hotel block is available for attendees who are traveling in or who prefer the convenience of staying on-site. Local attendees don't need to book a room.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who do I contact with questions?</summary>
+        <div class="faq-answer">Reach out to Gabby Jefferson at gabby@kocfirm.com with any questions about the day, accommodations, or accessibility needs.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-mark">The King Of Content</div>
+  <div class="footer-tagline">Client Appreciation Day · June 6, 2026</div>
+  <div class="footer-divider"></div>
+  <div class="footer-copy">© 2026 The King Of Content, Inc. · Atlanta, GA</div>
+</footer>
+
+</body>
+</html>
